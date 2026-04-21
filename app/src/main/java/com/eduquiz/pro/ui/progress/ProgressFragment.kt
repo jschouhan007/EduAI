@@ -20,6 +20,7 @@ class ProgressFragment : Fragment() {
     private var _binding: FragmentProgressBinding? = null
     private val binding get() = _binding!!
     private val viewModel: ProgressViewModel by viewModels()
+    private val dateFormatter by lazy { java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a", java.util.Locale.getDefault()) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentProgressBinding.inflate(inflater, container, false)
@@ -46,13 +47,17 @@ class ProgressFragment : Fragment() {
 
         viewModel.results.observe(viewLifecycleOwner) { list ->
             binding.tvHistory.text = list.joinToString("\n\n") {
-                "${it.courseTitle} • ${it.difficulty.name} • ${it.score}/${it.totalQuestions} • ${java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(java.util.Date(it.timestamp))}"
+                "${it.courseTitle} • ${it.difficulty.name} • ${it.score}/${it.totalQuestions} • ${dateFormatter.format(java.util.Date(it.timestamp))}"
             }
         }
     }
 
     private fun drawChart(scores: List<Int>) {
-        if (scores.isEmpty() || binding.chartView.width == 0 || binding.chartView.height == 0) return
+        if (scores.isEmpty()) return
+        if (binding.chartView.width == 0 || binding.chartView.height == 0) {
+            binding.chartView.post { drawChart(scores) }
+            return
+        }
         val width = binding.chartView.width
         val height = binding.chartView.height
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)

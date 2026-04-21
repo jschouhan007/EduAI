@@ -34,6 +34,7 @@
     <string name="fail">फेल</string>
     <string name="result_breakdown">सही: %1$d   गलत: %2$d   टाइमआउट: %3$d</string>
     <string name="review_answers">उत्तर देखें</string>
+    <string name="review_format">प्र: %1$s\nचयनित: %2$s\nसही: %3$s\nकारण: %4$s</string>
     <string name="try_again">फिर से प्रयास करें</string>
     <string name="go_home">होम जाएँ</string>
     <string name="ok">ठीक है</string>

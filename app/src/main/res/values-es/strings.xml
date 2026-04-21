@@ -34,6 +34,7 @@
     <string name="fail">REPROBADO</string>
     <string name="result_breakdown">Correctas: %1$d   Incorrectas: %2$d   Sin tiempo: %3$d</string>
     <string name="review_answers">Revisar respuestas</string>
+    <string name="review_format">P: %1$s\nElegida: %2$s\nCorrecta: %3$s\nExplicación: %4$s</string>
     <string name="try_again">Intentar de nuevo</string>
     <string name="go_home">Ir a inicio</string>
     <string name="ok">OK</string>

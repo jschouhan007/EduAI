@@ -48,7 +48,11 @@ class QuizFragment : Fragment() {
             binding.btnNext.visibility = if (s.showExplanation) View.VISIBLE else View.GONE
 
             if (s.completed) {
-                val reviews = ArrayList(s.reviews.map { "Q: ${it.question}\nSelected: ${it.selected}\nCorrect: ${it.correct}\nWhy: ${it.explanation}" })
+                val reviews = ArrayList(
+                    s.reviews.map {
+                        getString(R.string.review_format, it.question, it.selected, it.correct, it.explanation)
+                    }
+                )
                 val directions = QuizFragmentDirections.actionQuizToResult(
                     score = s.correctCount,
                     total = s.total,

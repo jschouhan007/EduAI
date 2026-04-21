@@ -11,7 +11,7 @@ class AuthRepository @Inject constructor(
     private val sessionManager: SessionManager
 ) {
     suspend fun login(email: String, password: String): Boolean {
-        delay(1000) // Simulate network request latency.
+        delay(MOCK_NETWORK_DELAY_MS) // Simulate network request latency.
         val isValid = email == "admin" && password == "admin"
         if (isValid) sessionManager.saveLogin(email)
         return isValid
@@ -19,5 +19,9 @@ class AuthRepository @Inject constructor(
 
     fun continueAsGuest() {
         sessionManager.saveGuestLogin()
+    }
+
+    private companion object {
+        const val MOCK_NETWORK_DELAY_MS = 1000L
     }
 }

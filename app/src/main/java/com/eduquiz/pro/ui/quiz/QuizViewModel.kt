@@ -74,7 +74,8 @@ class QuizViewModel @Inject constructor(
                 delay(1000)
                 t--
             }
-            if ((_state.value?.showExplanation == false) && !_state.value!!.completed) {
+            val currentState = _state.value ?: return@launch
+            if (!currentState.showExplanation && !currentState.completed) {
                 onOptionSelected("", timedOut = true)
             }
         }

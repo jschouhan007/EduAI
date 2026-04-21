@@ -31,8 +31,7 @@ class LoginActivity : androidx.appcompat.app.AppCompatActivity() {
     lateinit var languageManager: LanguageManager
 
     override fun attachBaseContext(newBase: Context) {
-        val manager = LanguageManager(newBase.applicationContext)
-        super.attachBaseContext(manager.wrapContext(newBase))
+        super.attachBaseContext(LanguageManager.wrapContext(newBase))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

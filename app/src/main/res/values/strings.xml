@@ -34,6 +34,7 @@
     <string name="fail">FAIL</string>
     <string name="result_breakdown">Correct: %1$d   Wrong: %2$d   Timed out: %3$d</string>
     <string name="review_answers">Review Answers</string>
+    <string name="review_format">Q: %1$s\nSelected: %2$s\nCorrect: %3$s\nWhy: %4$s</string>
     <string name="try_again">Try Again</string>
     <string name="go_home">Go Home</string>
     <string name="ok">OK</string>
