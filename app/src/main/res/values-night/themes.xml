@@ -1,0 +1,10 @@
+<!-- FILE: app/src/main/res/values-night/themes.xml -->
+<resources>
+    <style name="Theme.EduQuizPro" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/on_primary_dark</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="android:textColorPrimary">@color/on_bg_dark</item>
+    </style>
+</resources>

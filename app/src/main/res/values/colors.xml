@@ -1,0 +1,20 @@
+<!-- FILE: app/src/main/res/values/colors.xml -->
+<resources>
+    <color name="primary_blue">#1565C0</color>
+    <color name="primary_blue_dark">#5C9BF5</color>
+    <color name="on_primary_light">#FFFFFF</color>
+    <color name="on_primary_dark">#000000</color>
+    <color name="bg_light">#FFFFFF</color>
+    <color name="surface_light">#F5F5F5</color>
+    <color name="on_bg_light">#212121</color>
+    <color name="bg_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="on_bg_dark">#E0E0E0</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#22000000</color>
+    <color name="easy_green">#A5D6A7</color>
+    <color name="medium_amber">#FFE082</color>
+    <color name="hard_red">#EF9A9A</color>
+    <color name="correct_green">#C8E6C9</color>
+    <color name="wrong_red">#FFCDD2</color>
+</resources>
