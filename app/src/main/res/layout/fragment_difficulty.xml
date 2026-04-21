@@ -1,0 +1,66 @@
+<!-- FILE: app/src/main/res/layout/fragment_difficulty.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCourseIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="38sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCourseTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/tvCourseIcon"
+        app:layout_constraintStart_toEndOf="@id/tvCourseIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEasy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/easy_green">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:text="Easy • Great for beginners • ~5 minutes"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/cardEasy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/medium_amber">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:text="Medium • Test your knowledge • ~5 minutes"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/cardMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/hard_red">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:text="Hard • Challenge yourself • ~5 minutes"/>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

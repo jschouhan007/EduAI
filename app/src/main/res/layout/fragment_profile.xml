@@ -1,0 +1,152 @@
+<!-- FILE: app/src/main/res/layout/fragment_profile.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvAvatar"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="28sp"/>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfile"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View android:id="@+id/div1" android:layout_width="0dp" android:layout_height="1dp" android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/cardUser" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appearance"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/div1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvAppearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <RadioButton android:id="@+id/rbThemeLight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light"/>
+            <RadioButton android:id="@+id/rbThemeDark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dark"/>
+            <RadioButton android:id="@+id/rbThemeSystem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/system_default"/>
+        </RadioGroup>
+
+        <View android:id="@+id/div2" android:layout_width="0dp" android:layout_height="1dp" android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/rgTheme" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/div2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvLanguage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <RadioButton android:id="@+id/rbLangEnglish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="English"/>
+            <RadioButton android:id="@+id/rbLangHindi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="हिंदी"/>
+            <RadioButton android:id="@+id/rbLangSpanish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Español"/>
+        </RadioGroup>
+
+        <View android:id="@+id/div3" android:layout_width="0dp" android:layout_height="1dp" android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/rgLanguage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/div3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/rowResetProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_progress"
+            android:padding="12dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_delete"
+            app:layout_constraintTop_toBottomOf="@id/tvAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/rowLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textColor="@color/hard_red"
+            android:padding="12dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_logout"
+            app:layout_constraintTop_toBottomOf="@id/rowResetProgress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
